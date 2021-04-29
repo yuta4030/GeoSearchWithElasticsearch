@@ -1,0 +1,145 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+          "area_code": "01",
+          "name": "ALL",
+          "level": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [ 0.0, 0.0 ],
+            [ 10.0, 0.0 ],
+            [ 10.0, 10.0 ],
+            [ 0.0, 10.0 ],
+            [ 0.0, 0.0 ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+          "area_code": "0101",
+          "name": "A",
+          "level": 2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [ 0.0, 0.0 ],
+            [ 10.0, 0.0 ],
+            [ 10.0, 5.0 ],
+            [ 0.0, 5.0 ],
+            [ 0.0, 0.0 ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+          "area_code": "0102",
+          "name": "B",
+          "level": 2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [ 0.0, 10.0 ],
+            [ 10.0, 10.0 ],
+            [ 10.0, 5.0 ],
+            [ 0.0, 5.0 ],
+            [ 0.0, 10.0 ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+          "area_code": "010101",
+          "name": "A-1",
+          "level": 3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [ 0.0, 0.0 ],
+            [ 5.0, 0.0 ],
+            [ 5.0, 5.0 ],
+            [ 0.0, 5.0 ],
+            [ 0.0, 0.0 ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+          "area_code": "010102",
+          "name": "A-2",
+          "level": 3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [ 5.0, 0.0 ],
+            [ 10.0, 0.0 ],
+            [ 10.0, 5.0 ],
+            [ 5.0, 5.0 ],
+            [ 5.0, 0.0 ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+          "area_code": "010201",
+          "name": "B-1",
+          "level": 3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [ 0.0, 5.0 ],
+            [ 5.0, 5.0 ],
+            [ 5.0, 10.0 ],
+            [ 0.0, 10.0 ],
+            [ 0.0, 5.0 ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+          "area_code": "010202",
+          "name": "B-2",
+          "level": 3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [ 5.0, 5.0 ],
+            [ 10.0, 5.0 ],
+            [ 10.0, 10.0 ],
+            [ 5.0, 10.0 ],
+            [ 5.0, 5.0 ]
+          ]
+        ]
+      }
+    }
+  ]
+}
