@@ -11,8 +11,8 @@ $ docker-compose up -d
 $ poetry run python geo_search/setting.py
 {'acknowledged': True, 'shards_acknowledged': True, 'index': 'geo_example'}
 
-# check the reverse-geocoording
-$ poetry run python geo_search/reverse-geocoording.py | jq .
+# check the reverse-geocoding
+$ poetry run python geo_search/reverse-geocoding.py | jq .
 [
   {
     "_index": "geo_example",
