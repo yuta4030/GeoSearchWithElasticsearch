@@ -1,14 +1,14 @@
 import json
 
-from elasticsearch import Elasticsearch
+from opensearchpy import OpenSearch
 
 
 INDEX_NAME = "geo_example"
 
-es = Elasticsearch(host="localhost", port=9200)
+client = OpenSearch(host="localhost", port=9200)
 
 target = [[7.0, 7.0], [7.0, 7.0]]
-result = es.search(index=INDEX_NAME, body={
+result = client.search(index=INDEX_NAME, body={
     "query": {
         "bool": {
             "must": {

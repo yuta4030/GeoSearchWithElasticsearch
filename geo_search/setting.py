@@ -1,21 +1,21 @@
 import os
 import geojson
 
-from elasticsearch import Elasticsearch, helpers
+from opensearchpy import OpenSearch, helpers
 
 
 INDEX_NAME = "geo_example"
 GEO_JSON_FILE_PATH = f"{os.path.dirname(__file__)}/test_data/geojson.json"
 
 
-def delete_index(es: Elasticsearch):
-    if es.indices.exists(index=INDEX_NAME):
-        result = es.indices.delete(index=INDEX_NAME)
+def delete_index(client: OpenSearch):
+    if client.indices.exists(index=INDEX_NAME):
+        result = client.indices.delete(index=INDEX_NAME)
         print(result)
 
 
-def create_index(es: Elasticsearch):
-    result = es.indices.create(index=INDEX_NAME, body={
+def create_index(client: OpenSearch):
+    result = client.indices.create(index=INDEX_NAME, body={
         "mappings": {
             "properties": {
                 "geometry": {
@@ -33,7 +33,7 @@ def geojson_to_es(gj: geojson):
         yield feature
 
 
-def index_geojson(es: Elasticsearch):
+def index_geojson(client: OpenSearch):
     with open(GEO_JSON_FILE_PATH) as f:
         gj = geojson.load(f)
         features = ({
@@ -41,11 +41,11 @@ def index_geojson(es: Elasticsearch):
             "_source": feature,
         } for feature in geojson_to_es(gj))
 
-        helpers.bulk(es, features)
+        helpers.bulk(client, features)
 
 
 if __name__ == '__main__':
-    es = Elasticsearch(host="localhost", port=9200)
-    delete_index(es=es)
-    create_index(es=es)
-    index_geojson(es=es)
+    client = OpenSearch(host="localhost", port=9200)
+    delete_index(client=client)
+    create_index(client=client)
+    index_geojson(client=client)

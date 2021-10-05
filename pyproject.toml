@@ -6,8 +6,8 @@ authors = ["yuta-ito <hal4030@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-elasticsearch = "^7.12.1"
 geojson = "^2.5.0"
+opensearch-py = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 
